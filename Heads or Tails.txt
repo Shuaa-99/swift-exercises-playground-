@@ -1,0 +1,17 @@
+func tossCoin() -> String { //Create a function tossCoin() ->  String
+print("Tossing a Coin!") //Have this function print "Tossing a Coin!"
+let headORTail = ["head","tail"]
+let pickValue = headORTail[Int.randim(in: 0...1)]
+return(pickValue)}
+func tossMultipalCoins(numOFtosse: Int) -> Double{ //create another function tossMultipleCoins(Int) -> Double
+  var numOFHead = 0.0
+  var numOfTail = 0.0
+  for _ in 0..<numOFtosse {
+      let result = tossCoin()
+      if result == "Head"{
+     numOFHead += 1
+      }
+     else{  numOfTail += 1 }
+     print(result)} 
+     return numOFHead/ Double(numOFtosse)  }
+   print(tossMultipalCoins(numOFtosse: 5))

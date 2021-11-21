@@ -1,0 +1,39 @@
+class Animal{ // create a class called Animal
+var name : String
+var health = 100
+init(name : String) {
+    self.name = name
+}
+func  displayHealth()  {
+    print("health is \(health)")
+}
+} 
+class Cat : Animal{//create a subclass of Animal called Cat
+func growl ()  {
+    print("Rawr!")
+    self.health = 150}
+    func run()  {
+      if self.health >= 10{
+            print("Running")
+        self.health -= 10
+      }
+      
+    }
+}
+class Cheetah:Cat{ // create two subclasses of Cat - Cheetah and Lion
+     Override func run()  {
+         if self.health >= 50 {
+              print("Running Fast")
+       self. health -= 50   }
+        }  
+       func sleep() {
+           if self.health > 10 {
+              self.health = 150  } 
+              else{self.health += 50} 
+          } }
+class Lion : Cat{ 
+    Override func growl()  {
+      print("ROAR!!!! I am the King of the Jungle")  
+    } 
+     Override init(name:String) {
+         self.health = 200  }}

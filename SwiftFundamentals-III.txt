@@ -1,0 +1,19 @@
+var arry = [Int] ()
+for i in 1...255 {//Write a program that adds the numbers 1-255 to an array
+arry.append(i)}
+//-----
+    arry.swapAt(Int.random(in: 0..<arry.count) , Int.random(in: 0..<arry.count)) //Swap two random values in the array
+
+//----
+   
+for i in 0...99 { //Now write the code that swaps random values 100 times
+    arry.swapAt(Int.random(in: 0..<arry.count) , Int.random(in: 0..<arry.count)) 
+    }
+
+//------
+for ii in 0..<arry.count{ //Remove the value "42" from the array"We found the answer to the Ultimate Question of Life, the Universe, and Everything at index __" and print the index of where "42" was before you removed it
+if arry[ii] == 42{
+print("We found the answer to the Ultimate Question of Life, the Universe, and Everything at index __\(ii)")
+arry.remove(at: ii) 
+break } }
+print(arry)

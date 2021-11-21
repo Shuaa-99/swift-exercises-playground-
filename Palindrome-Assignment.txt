@@ -1,0 +1,12 @@
+ func cheackPalindrome(word: String){
+        print("Enter the String for check:")
+        let word2 = String(word.reversed())
+        if word2 == word{
+            print(word)
+        print("it's Palindrome")}
+        else {
+              print(word)
+        print("is not a palindrome")}
+    }
+     cheackPalindrome(word: "codingdojoissomuchfun") 
+      cheackPalindrome(word: "racecar")

@@ -1,0 +1,22 @@
+struct Point { //Create a Point struct that has two properties called "X" & "Y" both of which are Doubles
+    var x : Double
+   var y : Double
+}
+struct Line {//Create a Line struct that has a "Start" and "End" property both of type Point
+    var start: Point
+     var end: Point
+      func length() -> Double { //In the Line struct add a function to return the Length of the created line as a Double.
+       var x1 = start.x
+        var x2 = end.x
+         var y1 = start.y
+        var y2 = end.y
+var one = pow((x2- x1),2) var tow = pow((y2 - y1),2)
+var fainlResult = sqrt((one + tow))
+return fainlResult
+       }
+      }
+  struct Triangle {//Create a Triangle Struct that contains a property called "Points" which is an array of type Point
+    var points =  ["collinear","noncollinear","concurrent"]
+   
+
+}

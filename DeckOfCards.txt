@@ -1,0 +1,29 @@
+struct Card { //Create a struct called "Card" 
+    enum Color {//a property "Color" This value should be a String or an Enum
+        case red
+        case blue
+        case green }
+ let roll = Int.random(in: 1..<7)//Give the Card a property "Roll"
+        
+        func rollValue(_ :Color)  {
+            while roll > 1 {
+              if roll < 3 {
+                print(Color.blue)
+              }
+              else  if roll == 3 || roll == 4   {
+                  print (Color.red)
+              }
+                 else  if roll > 3 &&  roll < 7   {
+                  print (Color.green)
+              }
+            }
+        }}
+class Deck{//create a class called "Deck"
+    var cards = [Card]
+
+}class Player {//create a class called "Player"
+var name : String 
+var hand = [Card]
+func draw (_ Deck ) -> Card
+return }
+

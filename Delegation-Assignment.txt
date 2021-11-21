@@ -1,0 +1,54 @@
+public class DelegationDemonstration {
+    public static void main(String[] args){
+        SwiftDeveloper switDev = new SwiftDeveloper();
+        UXDesigner designer = new UXDesigner();
+        KotlinDeveloper kotlinDev = new KotlinDeveloper();//The HW
+        Employee james = new Employee(switDev,designer);
+        Employee david = new Employee(kotlinDev,designer);
+         Employee Shuaa = new Employee(kotlinDev);
+        
+        james.writeCode();
+        james.design();
+        david.writeCode();
+        david.design();
+        Shuaa.writeCode();//The HW
+    }
+}
+interface WhoCanCode {
+    void writeCode();
+}
+interface WhoCanDesign {
+    void design();
+}
+class Employee implements WhoCanCode, WhoCanDesign {
+    WhoCanCode developer;
+    WhoCanDesign designer;
+    public Employee(WhoCanCode developer, WhoCanDesign designer){
+        this.developer = developer;
+        this.designer = designer;
+    }
+    @Override
+    public void writeCode() {
+        developer.writeCode();
+    }
+    @Override
+    public void design() {
+        designer.design();
+    }
+}
+class SwiftDeveloper implements WhoCanCode {
+    @Override
+    public void writeCode() {
+        System.out.println("I'm writing Swift Code");
+    }
+}
+class UXDesigner implements  WhoCanDesign {
+    @Override
+    public void design() {
+        System.out.println("I'm designing UX");
+    }
+}class KotlinDeveloper implements WhoCanCode {//The HW
+    @Override
+    public void writeCode() {
+        System.out.println("I'm writing Kotlin Code");
+    }
